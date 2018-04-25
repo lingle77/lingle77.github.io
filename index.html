@@ -6,34 +6,48 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>下划线生成器</title>
-	<link rel="stylesheet" type="text/css" href="./css/weui.min.css">
+	
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/flat-ui.css">
 	<link rel="stylesheet" type="text/css" href="./css/example.css">
 </head>
 
 <body>
+	<div class="container">
+		<div class="col-lg-10" style="margin-top:20px;">
+			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+				<div class="tile">
+					<img src="http://p00kmksab.bkt.clouddn.com/logo.png" class="tile-image">
+					<h3 class="tile-title">下划线生成器</h3>
+					<p>关注「知晓程序」公众号，回复「晓技巧」，获知更多微信小技巧。</p>
 
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="form-group">
+								<div class="input-group">
+									<input class="form-control"id="text-input" type="text" name="" value=""/>
+									<span class="input-group-btn">
+										<button class="btn btn-default" type="button" id="convert-button" onclick="convert()">转换</button>
+									</span>
+								</div><!-- /input-group -->
+							</div>
+							<div class="form-group">
+								<div class="input-group">
+									<input class="form-control"id="result-text" type="text" name="" value=""/>
+									<span class="input-group-btn">
+										<button class="btn btn-default" type="button" id="convert-button" onclick="copyText()">复制</button>
+									</span>
+								</div><!-- /input-group -->
+							</div><!-- /.form-group -->
+						</div><!-- /.col-lg-6 -->
+					</div><!-- /.row -->
 
-
-	<div class="weui-cells weui-cells_form">
-		<img class="tile-image big-illustration" alt="" src="http://p00kmksab.bkt.clouddn.com/logo.png">
-
-		<h3 class="tile-title">下划线生成器</h3>
-
-		<div class="weui-cell weui-cell_vcode">
-			<div class="weui-cell__bd">
-				<input class="weui-input" id="text-input" type="text" name="" value=""/>
-			</div>
-			<div class="weui-cell__ft">
-				<button class="weui-vcode-btn" type="button" id="convert-button" onclick="convert()">转换</button>
-			</div>
-		</div>
-
-		<div class="weui-cell weui-cell_access">
-			<div class="weui-cell__bd">
-				<input class="weui-input" id="result-text" type="text" name="" value=""></input>
+					<a class="btn btn-primary btn-large btn-block" href="http://t.cn/REQnOQy">彩蛋</a>
+				</div>
 			</div>
 		</div>
 	</div>
+
 	<script type="text/javascript" src="jquery.min.js"></script>
 	<script type="text/javascript">
 		const underline = '꯭'
@@ -50,6 +64,18 @@
 			return outputText
 		}
 	</script>
+
+	<script type="text/javascript"> 
+		function copyText(){
+			var e = document.getElementById("result-text");
+			e.select(); // 选择对象
+			document.execCommand("Copy"); // 执行浏览器复制命令
+		}
+	</script>
+
+
+	<script src="./js/application.js"></script>
+	<script src="./js/flat-ui.min.js"></script>
 </body>
 
 </html>
