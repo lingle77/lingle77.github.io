@@ -6,3 +6,9 @@
 .tile {
   background-color: #f7f9fd;
 }
+
+.tile-image {
+  height: 100px;
+  margin: 10px 0 27px;
+  vertical-align: bottom;
+}
